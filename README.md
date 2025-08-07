@@ -9,7 +9,7 @@ A modern React-based news application that fetches and displays the latest news 
 *Main dashboard showing news articles with search and filter options*
 
 ### Country Filtering
-![Country Filter](./src/assets/screenshots/search-feature.png)
+![Country Filter](./src/assets/screenshots/country-filter.png)
 *Filtering news by different countries*
 
 ### Category Filtering
