@@ -2,6 +2,21 @@
 
 A modern React-based news application that fetches and displays the latest news articles from various sources.
 
+## Screenshots
+
+### Main Interface
+![NewsHub Main Interface](./src/assets/screenshots/main-interface.png)
+*Main dashboard showing news articles with search and filter options*
+
+### Search Functionality
+![Country Filter](./src/assets/screenshots/search-feature.png)
+*Filtering news by different countries*
+
+### Category Filtering
+![Category Filter](./src/assets/screenshots/category-filter.png)
+*Filtering news by different categories*
+
+
 ## Features
 
 - 📰 Latest news articles from multiple sources
