@@ -150,6 +150,72 @@ const App = () => {
             justifyContent: 'center',
             alignItems: 'center'
           }}>
+            {/* Category Filter */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <label style={{ 
+                fontSize: '14px', 
+                fontWeight: '600', 
+                color: '#374151',
+                minWidth: 'fit-content'
+              }}>
+                Category:
+              </label>
+              <select 
+                value={category} 
+                onChange={e => setCategory(e.target.value)}
+                style={{ 
+                  padding: '14px 16px', 
+                  fontSize: '15px',
+                  border: '2px solid #e1e5e9',
+                  borderRadius: '12px',
+                  backgroundColor: 'white',
+                  color: '#374151',
+                  cursor: 'pointer',
+                  outline: 'none',
+                  minWidth: '140px'
+                }}
+              >
+                {categories.map(cat => (
+                  <option key={cat} value={cat}>
+                    {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {/* Country Filter */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <label style={{ 
+                fontSize: '14px', 
+                fontWeight: '600', 
+                color: '#374151',
+                minWidth: 'fit-content'
+              }}>
+                Country:
+              </label>
+              <select 
+                value={country} 
+                onChange={e => setCountry(e.target.value)}
+                style={{ 
+                  padding: '14px 16px', 
+                  fontSize: '15px',
+                  border: '2px solid #e1e5e9',
+                  borderRadius: '12px',
+                  backgroundColor: 'white',
+                  color: '#374151',
+                  cursor: 'pointer',
+                  outline: 'none',
+                  minWidth: '160px'
+                }}
+              >
+                {countries.map(country => (
+                  <option key={country.code} value={country.code}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             {/* Search Form */}
             <form onSubmit={handleSearch} style={{ 
               display: 'flex', 
@@ -220,72 +286,6 @@ const App = () => {
                 Search
               </button>
             </form>
-            
-            {/* Category Filter */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <label style={{ 
-                fontSize: '14px', 
-                fontWeight: '600', 
-                color: '#374151',
-                minWidth: 'fit-content'
-              }}>
-                Category:
-              </label>
-              <select 
-                value={category} 
-                onChange={e => setCategory(e.target.value)}
-                style={{ 
-                  padding: '14px 16px', 
-                  fontSize: '15px',
-                  border: '2px solid #e1e5e9',
-                  borderRadius: '12px',
-                  backgroundColor: 'white',
-                  color: '#374151',
-                  cursor: 'pointer',
-                  outline: 'none',
-                  minWidth: '140px'
-                }}
-              >
-                {categories.map(cat => (
-                  <option key={cat} value={cat}>
-                    {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                  </option>
-                ))}
-              </select>
-            </div>
-            
-            {/* Country Filter */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <label style={{ 
-                fontSize: '14px', 
-                fontWeight: '600', 
-                color: '#374151',
-                minWidth: 'fit-content'
-              }}>
-                Country:
-              </label>
-              <select 
-                value={country} 
-                onChange={e => setCountry(e.target.value)}
-                style={{ 
-                  padding: '14px 16px', 
-                  fontSize: '15px',
-                  border: '2px solid #e1e5e9',
-                  borderRadius: '12px',
-                  backgroundColor: 'white',
-                  color: '#374151',
-                  cursor: 'pointer',
-                  outline: 'none',
-                  minWidth: '160px'
-                }}
-              >
-                {countries.map(country => (
-                  <option key={country.code} value={country.code}>
-                    {country.name}
-                  </option>
-                ))}
-              </select>
-            </div>
           </div>
         </div>
 
